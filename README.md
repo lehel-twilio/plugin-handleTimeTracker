@@ -30,4 +30,4 @@ Go to your [Twilio Assets](https://www.twilio.com/console/runtime/assets/public)
 
 ### Change log
 
-7/6/2019 - v1.0 - Initial Release
+7/8/2019 - v1.0 - Initial Release
