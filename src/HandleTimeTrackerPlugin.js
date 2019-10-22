@@ -24,7 +24,12 @@ export default class HandleTimeTrackerPlugin extends FlexPlugin {
     flex.Actions.addListener('beforeSelectTask', (payload) => logHandleTime(payload, manager.store));
 
     //Add Listener for Competed Task
-    flex.Actions.addListener('beforeWrapupTask', (payload) => finishTask(payload, manager.store));
+    flex.Actions.addListener('afterAcceptTask', (payload) => {
+      payload.task._task.on('wrapup', (payload) => calculateHandlTime(payload, manager.store))
+    });
+
+    //Write the handle time to the task as an attribute
+    flex.Actions.addListener('beforeCompleteTask', (payload) => writeHandleTime(payload, manager.store));
 
     //Add custom redux store
     manager.store.addReducer('handleTimeTracker', handleTimeTrackerReducer);

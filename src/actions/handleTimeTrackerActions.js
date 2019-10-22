@@ -1,9 +1,16 @@
-export const taskSelected = (taskSid, previousHandleTime, previousTaskSid, previousTaskSelectedTime) => ({
+export const taskSelected = (currentTaskSid, currentTaskPreviousHandleTime, previousTaskSid, previousTaskSelectedTime, previousTaskHandleTime) => ({
   type: 'TASK_SELECTED',
-  taskSid,
-  previousHandleTime,
+  currentTaskSid,
+  currentTaskPreviousHandleTime,
   previousTaskSid,
-  previousTaskSelectedTime
+  previousTaskSelectedTime,
+  previousTaskHandleTime
+})
+
+export const taskWrapping = (taskSid, handleTime) => ({
+  type: 'TASK_WRAPPING',
+  taskSid,
+  handleTime
 })
 
 export const taskCompleted = (taskSid) => ({

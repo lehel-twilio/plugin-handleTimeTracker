@@ -31,3 +31,5 @@ Go to your [Twilio Assets](https://www.twilio.com/console/runtime/assets/public)
 ### Change log
 
 7/8/2019 - v1.0 - Initial Release
+
+10/22/2019 - v2.0 - Version 1.0 of this plugin had some major flaws that required a redesign of the entire plugin. Version 2.0 should work much more reliably.
